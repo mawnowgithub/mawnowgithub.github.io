@@ -1,0 +1,73 @@
+body,
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 20px;
+	background-color: #ccc;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+h2 {
+	font-size: 14px;
+	font-weight: normal;
+	padding: 20px;
+	background-color: rgb(194, 247, 247);
+}
+#timer-bar {
+	width: 100%;
+	height: 30px;
+	background-color: green;
+	transition: all 0.2s;
+	border-radius: 10px;
+}
+
+button {
+	width: 100%;
+	height: 30px;
+    background-color: green;
+    color: #FFF;
+    font-size: 24px;
+    height: auto;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(3, 59, 3);
+}
+
+.hidden {
+	display: none;
+}
+
+#counter {
+	text-align: right;
+}
+
+#counter span {
+	color: rgb(73, 73, 73);
+}
+
+#counter #counter__current {
+	font-weight: bold;
+	color: #000;
+}
+
+#info{
+    color: rgb(90, 10, 7);
+    background-color: rgb(252, 126, 126);
+    padding: 30px;
+}
+
+.finished{
+    text-align: center;
+    background-color: greenyellow;
+}
+
+#questions-list-container{
+    margin-bottom: 30px;
+}

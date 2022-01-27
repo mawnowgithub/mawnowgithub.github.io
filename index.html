@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="functions.js"></script>
+	</head>
+	<body>
+		<section>
+			<h1>Automatic interviewer</h1>
+			<div id="counter" class="hidden">
+                Question:
+				<span id="counter__current"> 1 </span>
+				/
+				<span id="counter__total"> 1 </span>
+			</div>
+			<h2 id="question">Questions will appear here.</h2>
+            <div id="timer-bar" class="hidden"></div>
+			<p id="remaining" class="hidden">
+				Remaining time for this question:
+				<span id="timer">0</span>
+			</p>
+		</section>
+        <p id="info"><strong>Attention: </strong>Once you start the test you can't stop or pause until the end. There are <span id="number-questions"></span> questions in total and you should answer all of them.</p>
+
+        <div id="questions-list-container">
+            <h3>Question list</h3>
+            <details>
+                <summary>Read the questions before starting</summary>
+                <ol id="question-list">
+
+                </ol>
+            </details>
+        </div>
+		<button id="start-button">start test</button>
+	</body>
+</html>
