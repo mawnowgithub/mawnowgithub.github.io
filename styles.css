@@ -16,13 +16,14 @@ body {
 }
 
 #question {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: normal;
 	padding: 30px;
 	background-color: #fff;
 	border-radius: 20px;
 	position: relative;
 	color: #03595b;
+	margin-bottom: 20px;
 }
 
 #question::after {
@@ -44,10 +45,10 @@ body {
 	transition: all 0.2s;
 	border-radius: 10px;
 }
-#timer {	
+#timer {
 	font-size: 24px;
 	font-weight: bold;
-	color: #0d1e77;	
+	color: #0d1e77;
 	background-color: #d7faed;
 	padding: 10px;
 	border-radius: 50%;
@@ -113,6 +114,9 @@ button:hover {
 	transform: rotate(1deg);
 	color: #400c01;
 }
+#questions-list-container h3 {
+	text-align: center;
+}
 
 #question-list li {
 	margin: 5px 0;
@@ -140,9 +144,15 @@ button:hover {
 	top: 30px;
 }
 
-#remaining{
+#remaining {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top:10px
+	margin-top: 10px;
+}
+
+summary {
+	cursor: pointer;
+	background-color: #e2e213;
+	padding: 10px;
 }

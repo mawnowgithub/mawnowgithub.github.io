@@ -12,33 +12,54 @@
 		<section>
 			<h1>Welcome to this conversation</h1>
 			<div id="counter" class="hidden">
-                Question:
+				Question:
 				<span id="counter__current"> 1 </span>
 				/
 				<span id="counter__total"> 1 </span>
 			</div>
 
-			<div id="teacher-avatar"><img src="images/teacher.png" alt="teacher"></div>
+			<div id="teacher-avatar">
+				<img src="images/teacher.png" alt="teacher" />
+			</div>
 
-			<h2 id="question">Hello! I want to make you some questions. We you are ready please press the <strong>start test</strong>  button.</h2>
-            <div id="timer-bar" class="hidden"></div>
+			<div id="question">
+				<h3>Hello!</h3>
+
+				<p>I want to make you some questions.</p>
+				<ul>
+					<li>
+						You will have
+						<strong><span id="total-time">0</span> </strong> seconds per question to prepare and record your answer. Try to avoid hesitation and repetition.
+					</li>
+					<li>
+						You can check the questions before we start in our
+						<strong>question list</strong>
+					</li>
+				</ul>
+
+				When you are ready please click the <strong>start test</strong> button.
+			</div>
+			<div id="timer-bar" class="hidden"></div>
 			<div id="remaining" class="hidden">
 				<p>Mind your time!</p>
 				<span id="timer">0</span>
 			</div>
 		</section>
-       
-        <div id="questions-list-container">
-            <h3>Question list</h3>
-            <details>
-                <summary>Read the questions before starting</summary>
-                <ol id="question-list">
 
-                </ol>
-            </details>
-        </div>
-		
+		<div id="questions-list-container">
+			<h3>Question list</h3>
+			<details>
+				<summary>Read the questions before starting</summary>
+				<ol id="question-list"></ol>
+			</details>
+		</div>
+
 		<button id="start-button">start test</button>
-		<p id="info"><strong>Attention: </strong>Once you start the test you can't stop or pause until the end. There are <span id="number-questions"></span> questions in total and you should answer all of them.</p>
+		<p id="info">
+			<strong>Attention: </strong>Once you start the test you can't stop or
+			pause until the end. There are
+			<span id="number-questions"></span> questions in total and you should
+			answer all of them.
+		</p>
 	</body>
 </html>

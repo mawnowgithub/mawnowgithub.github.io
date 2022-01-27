@@ -18,6 +18,7 @@ const init = () => {
     let info=document.getElementById("info")
     let remaining=document.getElementById("remaining")
     let numberQuestions=document.getElementById("number-questions")
+	let totalTimeContainer=document.getElementById("total-time")
 
 	const questions = [
         "What is your job?", 
@@ -104,6 +105,7 @@ const init = () => {
 	totalQuestions = questions.length
 	document.getElementById("counter__total").innerHTML = totalQuestions
     numberQuestions.innerHTML=totalQuestions
+	totalTimeContainer.innerHTML= time
 	publishList();
 }
 
