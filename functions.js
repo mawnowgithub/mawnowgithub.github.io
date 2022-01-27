@@ -1,5 +1,7 @@
 const init = () => {
 	let questionContainer = document.getElementById("question")
+	let questionListContainer= document.getElementById("questions-list-container")
+	let questionList= document.getElementById("question-list")
     let mainCounter=document.getElementById("counter")
 	let counter = document.getElementById("counter__current")
 	let currentQuestion = 0
@@ -66,7 +68,7 @@ const init = () => {
 		selectQuestion()
 
 		timer = setInterval(selectQuestion, time * 1000)
-
+		questionListContainer.classList.add("hidden")
 		button.remove()
         info.remove()
         timerBar.classList.remove("hidden")
@@ -90,10 +92,19 @@ const init = () => {
 		barControl()
 	}
 
+	const publishList=()=>{
+		let list=""
+		for(question of questions){
+			list+="<li>"+question+"</li>"
+		}
+		questionList.innerHTML=list
+	}
+
 	button.addEventListener("click", startTest)
 	totalQuestions = questions.length
 	document.getElementById("counter__total").innerHTML = totalQuestions
     numberQuestions.innerHTML=totalQuestions
+	publishList();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,3 +1,6 @@
+* {
+	box-sizing: border-box;
+}
 body,
 html {
 	font-family: Arial, Helvetica, sans-serif;
@@ -12,11 +15,27 @@ body {
 	margin: 0 auto;
 }
 
-h2 {
-	font-size: 14px;
+#question {
+	font-size: 18px;
 	font-weight: normal;
-	padding: 20px;
-	background-color: rgb(194, 247, 247);
+	padding: 30px;
+	background-color: #fff;
+	border-radius: 20px;
+	position: relative;
+	color: #03595b;
+}
+
+#question::after {
+	content: "";
+	display: block;
+	background-color: #fff;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: -3px;
+	transform: rotate(45deg);
+	z-index: -1;
+	left: 34px;
 }
 #timer-bar {
 	width: 100%;
@@ -25,23 +44,37 @@ h2 {
 	transition: all 0.2s;
 	border-radius: 10px;
 }
-
-button {
-	width: 100%;
-	height: 30px;
-    background-color: green;
-    color: #FFF;
-    font-size: 24px;
-    height: auto;
-    cursor: pointer;
+#timer {	
+	font-size: 24px;
+	font-weight: bold;
+	color: #0d1e77;	
+	background-color: #d7faed;
+	padding: 10px;
+	border-radius: 50%;
+	height: 48px;
+	width: 48px;
 }
 
-button:hover{
-    background-color: rgb(3, 59, 3);
+button {
+	height: 30px;
+	background-color: green;
+	color: #fff;
+	font-size: 20px;
+	height: auto;
+	cursor: pointer;
+	display: inline-block;
+	width: auto;
+	padding: 20px;
+	border-radius: 10px 10px 0 0;
+	line-height: 20px;
+}
+
+button:hover {
+	background-color: rgb(3, 59, 3);
 }
 
 .hidden {
-	display: none;
+	display: none !important;
 }
 
 #counter {
@@ -57,17 +90,59 @@ button:hover{
 	color: #000;
 }
 
-#info{
-    color: rgb(90, 10, 7);
-    background-color: rgb(252, 126, 126);
-    padding: 30px;
+#info {
+	color: rgb(90, 10, 7);
+	background-color: rgb(252, 126, 126);
+	padding: 10px;
+	border: 5px solid rgb(90, 10, 7);
+	border-width: 0 0 0 5px;
+	border-radius: 0 20px 20px 0;
+	margin: 0;
+	font-size: 12px;
 }
 
-.finished{
-    text-align: center;
-    background-color: greenyellow;
+.finished {
+	text-align: center;
+	background-color: greenyellow;
 }
 
-#questions-list-container{
-    margin-bottom: 30px;
+#questions-list-container {
+	margin-bottom: 30px;
+	background-color: #fbfb5a;
+	padding: 30px 50px;
+	transform: rotate(1deg);
+	color: #400c01;
+}
+
+#question-list li {
+	margin: 5px 0;
+}
+
+#teacher-avatar {
+	height: 100px;
+	width: 100px;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 50%;
+	display: flex;
+	padding: 10px;
+	justify-content: center;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+#teacher-avatar img {
+	width: 150px;
+	height: auto;
+	flex: 0 0 150px;
+	align-self: center;
+	position: relative;
+	top: 30px;
+}
+
+#remaining{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top:10px
 }
