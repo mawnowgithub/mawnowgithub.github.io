@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="functions.js"></script>
+		<title>Random sentences</title>
+		<link rel="shortcut icon" href="favicon.png" type="image/png">
+	</head>
+	<body>
+		<main>
+			<article id="session-config-panel">
+				<h2 class="main-title">
+					Select the number of sentences you want to try
+				</h2>
+				<div class="quantity-selector">
+					<div class="quantity-option-container">
+						<label for="sentences-5"> 5 </label>
+						<input
+							class="quantity-option"
+							id="sentences-5"
+							type="radio"
+							value="5"
+							name="quantity"
+							checked
+						/>
+					</div>
+					<div class="quantity-option-container">
+						<label for="sentences-5"> 10 </label>
+						<input
+							class="quantity-option"
+							type="radio"
+							value="10"
+							name="quantity"
+						/>
+					</div>
+					<div class="quantity-option-container">
+						<label for="sentences-5"> 15 </label>
+						<input
+							class="quantity-option"
+							type="radio"
+							value="15"
+							name="quantity"
+						/>
+					</div>
+					<div class="quantity-option-container">
+						<label for="sentences-5"> 20 </label>
+						<input
+							class="quantity-option"
+							type="radio"
+							value="20"
+							name="quantity"
+						/>
+					</div>
+				</div>
+				<button id="start">Go</button>
+			</article>
+
+			<article class="hidden" id="sentences-panel">
+				<h2 class="main-title sentences">Complete the sentence</h2>
+				<p class="counter">
+					Sentence <span class="current-count" id="current-count">0</span> of
+					<span class="total-count" id="total-count">0</span>
+				</p>
+				<div class="subtitle">
+					Write a
+					<div class="sentence-form">
+						<span id="form-1" class="form"></span>
+						<span id="form-2" class="form"></span>
+					</div>
+					sentence in the
+					<span class="sentence-tense" id="tense-1"></span>
+
+					tense
+				</div>
+				<section class="sentence">
+					<input class="input word" id="interrogative" type="text" />
+					<span class="word" id="article"></span>
+					<article class="word" id="subject-1"></article>
+					<input class="input word" id="not-interrogative" type="text" />
+					<article class="word" id="emotion-1"></article>
+					<span class="word" id="place-preposition"></span>
+					<article class="word" id="place-1"></article>
+					<span class="word" id="interrogative-mark">?</span>
+				</section>
+
+				<button id="next">next sentence</button>
+
+				<button id="finish" class="hidden">Finish</button>
+
+				<p class="hint">
+					<b>hint</b>: remember that you can click on the words marked with a
+					<span class="word-anchor no-hover">green border</span> to get its definition
+					and pronunciation.
+				</p>
+			</article>
+
+			<section id="report" class="report hidden">
+				<h2 class="main-title">This is your final report</h2>
+				<div class="report-grades-container">
+					<div class="report-grades" id="report-grades">---</div>
+				</div>
+				<div id="report-body">---</div>
+
+				<button id="restart">restart</button>
+			</section>
+		</main>
+	</body>
+</html>
